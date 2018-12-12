@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+
+    <TableLayout
+        android:id="@+id/table"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_gravity = "center">
+
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:paddingStart="20dp"
+                android:paddingEnd="0dp"
+                android:paddingBottom="10dp"
+                android:text="@string/score"
+                android:textSize="20sp"
+                android:textColor="@color/fg"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:text="@string/lives"
+                android:textSize="20sp"
+                android:textColor="@color/fg"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:paddingStart="0dp"
+                android:paddingEnd="0dp"
+                android:paddingBottom="10dp"
+                android:text="@string/high_score"
+                android:textSize="20sp"
+                android:textColor="@color/fg"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/curr_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_gravity="end"
+                android:text="@string/curr_score"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/curr_lives"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingBottom="10dp"
+                android:layout_gravity="end"
+                android:text="@string/curr_lives"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/curr_high_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_gravity="end"
+                android:text="@string/curr_high_score"
+                android:textSize="20sp" />
+        </TableRow>
+
+        <TableRow>
+
+            <FrameLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="4"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                >
+
+                <TextureView
+                    android:id="@+id/textureView"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center"/>
+
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/curr_color_name"
+                    android:layout_width="140dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginBottom="35dp"
+                    android:textColor="@color/bg"
+                    android:textSize="20sp"
+                    android:maxLines="1"/>
+
+                <TextView
+                    android:background="@drawable/boxanswer"
+                    android:id="@+id/box_answer"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center" />
+
+                <EditText
+                    android:id="@+id/curr_color_disp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="bottom|start"
+                    android:layout_marginStart="40sp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/hexagon" />
+
+            </FrameLayout>
+
+        </TableRow>
+    </TableLayout>
+
+    <ImageButton
+        android:id="@+id/btnCapture"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/table"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btncamera" />
+
+</RelativeLayout>
